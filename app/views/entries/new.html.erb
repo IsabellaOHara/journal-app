@@ -1,14 +1,24 @@
+<style>
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <h1>New Entry</h1>
 
 <%= form_with(model: @entry) do |form| %>
 
  <div>
     <%= form.label :group %>
-    <%= form.select :group, options_for_select(%w[Journal Notes]) %> <br>
+    <%= form.select :group, options_for_select(%w[Journal Notes]) %> 
+    <br>
     <%= form.label :name %>
-    <%= form.text_field :name %> <br>
+    <%= form.text_field :name %> 
+    <br>
     <%= form.label :link %>
-    <%= form.text_field :link %> <br>
+    <%= form.text_field :link %> 
+    <br>
     <%= form.label :notes %>
     <%= form.text_field :notes %>
  </div>

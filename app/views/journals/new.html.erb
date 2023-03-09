@@ -1,0 +1,33 @@
+<h1>New Journal Entry</h1>
+
+<%= form_with(model: @journal) do |form| %>
+
+ <div>
+    <div >
+    <%= form.label :day %>
+    <%= form.number_field :day, in: 1..31, step: 1 %> 
+    </div>
+
+    <div class="mb-3">
+    <%= form.label :month %>
+    <%= form.number_field :month, in: 1..12, step: 1 %> 
+    </div>
+    <div class="mb-3">
+    <%= form.label :year %>
+    <%= form.number_field :year %> 
+    </div>
+    <div class="mb-3">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+    </div>
+ </div>
+
+ <div>
+   <%= form.submit %>
+ </div>
+
+<% end %>

@@ -1,0 +1,40 @@
+<style>
+
+.nav2 {
+  height: 50px;
+  width: 80%;
+  background-color: #4d4d4d;
+  position: relative;
+  justify-content: center;
+}
+
+.nav2 > .nav-header2 {
+  display: inline;
+}
+
+.nav2 > .nav-header2 > .nav-title2 {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.links2 {
+    color: white
+}
+
+}
+</style>
+
+<div class="nav2">
+  <div class="nav-header2">
+    <div class="nav-title2">
+      <%= link_to "Journal", journals_path, class: "links2" %>
+      <%= link_to "Notes", entries_path, class: "links2" %>
+    </div>
+  </div>
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+</div>

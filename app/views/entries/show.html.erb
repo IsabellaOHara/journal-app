@@ -1,0 +1,32 @@
+
+<section class="section">
+	<div class="container">
+		<nav class="level">
+		  <!-- Left side -->
+		  <div class="level-left">
+		    <p class="level-item">
+		        <strong>Actions</strong>
+		    </p>
+		  </div>
+		  <!-- Right side -->
+		  <% @entries.each do |entry| %>
+		  <div class="level-right">
+             <p class="level-item">
+          
+          <%= button_to "Edit", entry, method: :get, class:"button" %>
+        </p> 
+        <p class="level-item">
+        
+        <%= button_to "Delete", entry, method: :delete, data: { confirm: "Are you sure?" }, class:"button is-danger" %>
+        </p>
+
+		  </div>
+		</nav>
+		<hr/>
+
+		<div class="content">
+			<%= @entry.notes %>
+		</div>
+         <% end %>
+	</div>
+</section>

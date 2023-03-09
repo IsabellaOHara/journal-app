@@ -1,7 +1,30 @@
 
-<h2>All Notes</h2>
+<h2>Login to your MyJournal account</h2>
 
-<style>
+<p> make a login page </p>
+
+<% content_for :page_title,  "Index" %>
+
+<div class="section">
+	<div class="container">
+		<% @entries.each do |entry| %>
+			<div class="card">
+		  <div class="card-content">
+		    <div class="media">
+		      <div class="media-content">
+		        <p class="title is-4"><%= link_to entry.name, entry  %></p>
+		      </div>
+		    </div>
+		    <div class="content">
+		     	<%= entry.notes %>
+		    </div>
+		  </div>
+		</div>
+		<% end %>
+	</div>
+</div>
+
+<!-- <style>
 h1, h2 {
     display: flex;
     justify-content: center;
@@ -42,4 +65,4 @@ table {
    </tr>
  <% end %>
  </table>
-</div>
+</div> -->

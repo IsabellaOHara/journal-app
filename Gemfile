@@ -19,7 +19,7 @@ gem "puma", "~> 5.0"
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem "turbo-rails", '~> 1.0.0'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -66,9 +66,9 @@ end
 # Make errors prettier
 gem 'better_errors', '~> 2.4'
 # Bulma CSS
-gem 'bulma-rails', '~> 0.6.1'
+gem 'bulma-rails', '~> 0.9.4'
 # Simple forms
-gem 'simple_form', '~> 5.0'
+gem 'simple_form', '~> 5.2'
 
 
 group :development do
@@ -95,7 +95,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "cssbundling-rails", "~> 1.1"
-
-gem "jsbundling-rails", "~> 1.1"

@@ -1,34 +1,40 @@
 <style>
-div {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.links{
+    color: white
+}
+
 }
 </style>
-<div>
- <div>
-   <%= link_to "Journal App", root_path %>
 
-   <div class="navbar-link">
-     <%= link_to "New Entry", new_entry_path %>
-   </div>
-
- </div>
-</div>
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" >Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled">Disabled</a>
-      </div>
+<div class="nav">
+  <div class="nav-header">
+    <div class="nav-title">
+      MyJournal
+      <%= link_to "Home", root_path, class: "links" %>
+      <%= link_to "New Entry", new_entry_path, class: "links" %>
     </div>
   </div>
-</nav>
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+</div>

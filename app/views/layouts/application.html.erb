@@ -6,12 +6,26 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+
   <%= render '/shared/navbar' %>
     <%= yield %>
-  </body>
+  </body> 
+
+  <!-- <style>
+    .navbar {
+    font-weight: 300;
+    color: #000000;
+    background-color: #EE82EE
+    position: relative
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+    }
+  </style>  -->
 </html>

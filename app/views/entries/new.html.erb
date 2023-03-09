@@ -1,26 +1,38 @@
-<style>
+<!-- <style>
     h1 {
         display: flex;
         justify-content: center;
     }
-</style>
+
+    form {
+        class: "form-group"
+        display: flex;
+        justify-content: center;
+    }
+</style> -->
 
 <h1>New Entry</h1>
 
 <%= form_with(model: @entry) do |form| %>
 
  <div>
+    <div class="mb-3">
     <%= form.label :group %>
     <%= form.select :group, options_for_select(%w[Journal Notes]) %> 
-    <br>
+    </div>
+
+    <div class="mb-3">
     <%= form.label :name %>
     <%= form.text_field :name %> 
-    <br>
+    </div>
+    <div class="mb-3">
     <%= form.label :link %>
     <%= form.text_field :link %> 
-    <br>
+    </div>
+    <div class="mb-3">
     <%= form.label :notes %>
     <%= form.text_field :notes %>
+    </div>
  </div>
 
  <div>

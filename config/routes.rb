@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     resources :entries, :journals
   end
   resources :entries, only: [:index, :new, :create, :show, :update, :edit, :destroy]
-  resources :journals
+  resources :journals, only: [:index, :new, :create, :show, :update, :edit, :destroy]
 end

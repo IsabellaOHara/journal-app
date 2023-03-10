@@ -3,8 +3,16 @@
       <div class="navbar-item">
         MyJournal
         <%= link_to "Home", root_path, class: "navbar-item" %>
-        <%= link_to "New Entry", new_entry_path, class: "navbar-item" %>
       </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          New Entry
+        </a>
+
+        <div class="navbar-dropdown">
+            <%= link_to "New journal entry", new_journal_path, class: "navbar-item" %>
+            <%= link_to "New note", new_entry_path, class: "navbar-item" %>
+        </div>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">

@@ -1,43 +1,53 @@
 
-<div class="has-text-centered">
-     <h2 class="subtitle is-3">All Notes</h2>
+<nav class="level">
+  <div class="level-left">
+    <div class="level-item">
+      <h2 class="title is-3">All Notes</h2> 
+    </div>
+  </div>
+  <div class="level-right">
+    <div class="level-item">
+      <%= link_to "New note", new_entry_path, class: "button is-primary" %>
+    </div>
+  </div>
+</nav>
+<br>
+<div class="container">
+<% @entries.each do |entry| %>
+  <nav class="level">
+    <!-- Left side -->
+
+
+    <div class="level-left">
+      <div class="level-item">
+          <h3 class="subtitle is-4">
+            <%= entry.name %>
+          </h3>
+      </div>
+    </div>
+    <!-- Right side -->
+    
+    <div class="level-right">
+        <p class="level-item">
+            <%= link_to "Edit", edit_entry_path(entry), class: "button" %>
+        </p> 
+        <p class="level-item">
+          <%= button_to "Delete", entry, method: :delete, data: { confirm: "Are you sure?" }, class:"button is-danger" %>
+        </p>
+    </div>
+  </nav>
+  <hr/>
+
+  <div class="content">
+    <strong>URL: </strong><%= entry.link %>
+    <br>
+    <strong>Notes: </strong><%= entry.notes %>
+  </div>
+  <% end %>
+  <br>
+  <br>
 </div>
 
-<section class="section">
-	<div class="container">
-  <% @entries.each do |entry| %>
-    <nav class="level">
-		  <!-- Left side -->
-
-
-		  <div class="level-left">
-        <div class="level-item">
-            <h3 class="subtitle is-4">
-              <%= entry.name %>
-            </h3>
-		    </div>
-      </div>
-		  <!-- Right side -->
-      
-		  <div class="level-right">
-          <p class="level-item">
-              <%= link_to "Edit", edit_entry_path(entry), class: "button" %>
-          </p> 
-          <p class="level-item">
-            <%= button_to "Delete", entry, method: :delete, data: { confirm: "Are you sure?" }, class:"button is-danger" %>
-          </p>
-		  </div>
-    </nav>
-    <hr/>
-
-		<div class="content">
-      <strong>URL: </strong><%= entry.link %>
-      <br>
-      <strong>Notes: </strong><%= entry.notes %>
-		</div>
-    <% end %>
-  </div>
-</section>
 
 <!-- <style>
 h1, h2 {

@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   namespace :welcome do
     resources :entries, :journals
   end
-  resources :entries 
+  resources :entries, only: [:index, :new, :create, :show, :update, :edit, :destroy]
   resources :journals
 end

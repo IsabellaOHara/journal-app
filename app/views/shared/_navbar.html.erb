@@ -1,40 +1,28 @@
-<style>
+ <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+        MyJournal
+        <%= link_to "Home", root_path, class: "navbar-item" %>
+        <%= link_to "New Entry", new_entry_path, class: "navbar-item" %>
+      </div>
 
-.nav {
-  height: 50px;
-  width: 100%;
-  background-color: #4d4d4d;
-  position: relative;
-}
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
 
-.nav > .nav-header {
-  display: inline;
-}
-
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
-
-.links{
-    color: white
-}
-
-}
-</style>
-
-<div class="nav">
-  <div class="nav-header">
-    <div class="nav-title">
-      MyJournal
-      <%= link_to "Home", root_path, class: "links" %>
-      <%= link_to "New Entry", new_entry_path, class: "links" %>
+        <div class="navbar-dropdown">
+            <%= link_to "My Journal", journals_path, class: "navbar-item" %>
+            <%= link_to "My Notes", entries_path, class: "navbar-item" %>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+          </div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
     </div>
-  </div>
-      <span></span>
-      <span></span>
-      <span></span>
-  </div>
-</div>

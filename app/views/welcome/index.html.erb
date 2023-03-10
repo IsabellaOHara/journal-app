@@ -1,10 +1,6 @@
-
-<h2>Login to your MyJournal account</h2>
-
-<p> make a login page </p>
-
-<% content_for :page_title,  "Index" %>
-
+<div class="has-text-centered">
+     <h2 class="subtitle is-3">All Entries</h2>
+</div>
 <div class="section">
 	<div class="container">
 		<% @entries.each do |entry| %>
@@ -12,7 +8,7 @@
 		  <div class="card-content">
 		    <div class="media">
 		      <div class="media-content">
-		        <p class="title is-4"><%= link_to entry.name, entry  %></p>
+		        <p class="title is-4"><%= link_to entry.name, entry %></p>
 		      </div>
 		    </div>
 		    <div class="content">

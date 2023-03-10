@@ -4,20 +4,19 @@
 		<nav class="level">
 		  <!-- Left side -->
 		  <div class="level-left">
-		    <p class="level-item">
-		        <strong>Actions</strong>
-		    </p>
+		    <div class="level-item">
+		        <h1 class="subtitle is-4"><%= @entry.name %></h1>
+		    </div>
 		  </div>
 		  <!-- Right side -->
-		  <% @entries.each do |entry| %>
 		  <div class="level-right">
              <p class="level-item">
           
-          <%= button_to "Edit", entry, method: :get, class:"button" %>
+          <%= link_to "Edit", edit_entry_path(@entry), class: "button" %>
         </p> 
         <p class="level-item">
         
-        <%= button_to "Delete", entry, method: :delete, data: { confirm: "Are you sure?" }, class:"button is-danger" %>
+        <%= button_to "Delete", @entry, method: :delete, data: { confirm: "Are you sure?" }, class:"button is-danger" %>
         </p>
 
 		  </div>
@@ -25,8 +24,9 @@
 		<hr/>
 
 		<div class="content">
+            <%= @entry.link %>
 			<%= @entry.notes %>
 		</div>
-         <% end %>
+
 	</div>
 </section>

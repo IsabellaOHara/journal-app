@@ -1,1 +1,26 @@
-<%= render 'form' %>
+<div class="is-align-content-center">
+    <h1 class="is-size-3">Edit your note</h1>
+</div>
+
+<div class="section">
+<%= simple_form_for @entry do |f| %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :name, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.input :link, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' }  %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.input :notes, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' }  %>
+    </div>
+  </div>
+  <%= f.button :submit, 'Save changes', class: "button is-primary" %>
+<% end %>
+</div>

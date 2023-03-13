@@ -1,6 +1,13 @@
 <br>
     <div class="field is-horizontal">
     <%= simple_form_for @journal do |f| %>
+    <div class="control">
+        <div class="select">
+            <%= f.input :group, collection: ["Journal"], selected: ["Journal"], label_html: { class: 'label' }  %>
+        </div>
+    </div>
+    <br>
+    <br>
     <div class="level-left">
         <div class="level-item">
             <div class="field-body">

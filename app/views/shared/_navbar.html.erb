@@ -5,7 +5,7 @@
         <strong>MyJournal</strong>
       </div>
       <div class="navbar-item">
-        <%= link_to "Home", root_path, class: "navbar-item" %>
+        <%= link_to "Home", welcome_index_path, class: "navbar-item" %>
       </div>
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -22,14 +22,18 @@
     </div>
     <div class="navbar-end">
       <div class="navbar-item">
+        <div class="navbar-search">
+          <input class="input" type="text", placeholder="Search">
+        </div>
+        <div class="navbar-item">
+        <button class="button is-primary"><strong>Search</strong></button>
+      </div>
+      <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+            <%= link_to "Sign up", new_user_path, class: "button is-primary" %>
+            <%= link_to "Log in/out", login_path, class: "button is-light" %>
         </div>
       </div>
+
     </div>
 </nav>

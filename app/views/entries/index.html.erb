@@ -6,6 +6,7 @@
     </div>
   </div>
   <div class="level-right">
+
     <div class="level-item">
       <%= link_to "New note", new_entry_path, class: "button is-primary" %>
     </div>
@@ -42,11 +43,15 @@
     <strong>URL: </strong><%= link_to entry.link %>
     <br>
     <strong>Notes: </strong><%= entry.notes %>
+    <% end %>
+    <br>
+
   </div>
-  <% end %>
+  
   <br>
   <br>
 </div>
+
 
 
 <!-- <style>

@@ -8,8 +8,7 @@ class EntriesController < ApplicationController
     end
  
     def create
-        @entry = Entry.new(entry_params.except(:tags))
-        create_or_delete_entries_tags(@entry, params[:entry][:tags])
+        @entry = Entry.new(entry_params)
         if @entry.save
             redirect_to @entry
         else
@@ -23,8 +22,8 @@ class EntriesController < ApplicationController
 
     def update
         @entry = Entry.find(params[:id])
-        create_or_delete_entries_tags(@entry, params[:entry][:tags])
-        if @entry.update(entry_params.except(:tags))
+
+        if @entry.update(entry_params)
             redirect_to @entry 
         else 
             render :edit
@@ -49,13 +48,7 @@ class EntriesController < ApplicationController
 
     private
 
-    def create_or_delete_entries_tags(entry, tags)
-        entry.taggables.destroy_all
-        tags = tags.strip.split(',')
-        tags.each do |tag|
-            entry.tags << Tag.find_or_create_by(name: tag)
-        end
-    end
+
  
     def entry_params
         params.require(:entry).permit(:group, :name, :link, :notes, :tags)

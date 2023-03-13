@@ -1,4 +1,4 @@
-<div class="section">
+<br>
     <div class="field is-horizontal">
     <%= simple_form_for @journal do |f| %>
     <div class="level-left">
@@ -17,13 +17,11 @@
             </div>
         </div>
         <div class="level-item">
-
             <div class="control">
-                <div class="select is-fullwidth">
+                <div class="select">
                     <%= f.input :year, collection: 2023..2100, selected: 2023, label_html: { class: 'label' }  %>
                 </div>
             </div>
-
         </div>
     </div>    
     </div>  
@@ -45,4 +43,3 @@
 
         <%= f.button :submit, 'Create new journal entry', class: "button is-primary" %>
     <% end %>
-</div>

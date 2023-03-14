@@ -4,39 +4,37 @@
             
         <div class="control">
             <div class="select">
-                <%= f.input :group, collection: ["Journal"], selected: ["Journal"], label_html: { class: 'label' }  %>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="field is-horizontal">
-            <div class="level-left">
-                <div class="level-item">
-                    <div class="field-body">
-                        <div class="control">
-                        <%= f.input :day, input_html: { class: 'input', max: 31 }, wrapper: false, label_html: { class: 'label' } %>
-                        </div>
-                    </div>
-                </div>
-                <div class="level-item">
-                    <div class="field-body">
-                        <div class="control">
-                        <%= f.input :month, input_html: { class: 'input', max: 12 }, wrapper: false, label_html: { class: 'label' }  %>
-                        </div>
-                    </div>
-                </div>
-                <div class="level-item">
-                    <div class="control">
-                        <div class="select is-fullwidth">
-                            <%= f.input :year, collection: 2023..2100, selected: 2023, label_html: { class: 'label' }  %>
-                        </div>
-                    </div>
-                </div>
+                <%= f.input :group, collection: ["Journal"], selected: ["Journal"], wrapper: false, label_html: { class: 'label' } %>
             </div>
         </div>
 
-  
-   
+        <br>
+        <br>
+        
+        <div class="level-left">
+            <div class="level-item">
+                <div class="field-body">
+                    <div class="control">
+                    <%= f.input :day, input_html: { class: 'input', max: 31 }, wrapper: false, label_html: { class: 'label' } %>
+                    </div>
+                </div>
+            </div>
+            <div class="level-item">
+                <div class="field-body">
+                    <div class="control">
+                    <%= f.input :month, input_html: { class: 'input', max: 12 }, wrapper: false, label_html: { class: 'label' }  %>
+                    </div>
+                </div>
+            </div>
+            <div class="level-item">
+                <div class="field-body">
+                    <div class="select is-fullwidth">
+                        <%= f.input :year, collection: 2023..2100, selected: 2023, wrapper: false, label_html: { class: 'label' }  %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
         <br>
         <br>
 

@@ -24,7 +24,7 @@
 		<hr/>
 
 		<div class="content">
-            <strong>URL: </strong> <%= @entry.link %>
+            <strong>URL: </strong> <%= link_to @entry.link, "http://#{@entry.link}" %>
 			<br>
 			<br>
 			<strong>Notes: </strong><p><%= @entry.notes %></p>

@@ -26,12 +26,13 @@
           <input class="input" type="text", placeholder="Search">
         </div>
         <div class="navbar-item">
-        <button class="button is-primary"><strong>Search</strong></button>
+        <button class="button is-primary has-text-dark"><strong>Search</strong></button>
       </div>
       <div class="navbar-item">
         <div class="buttons">
-            <%= link_to "Sign up", new_user_path, class: "button is-primary" %>
-            <%= link_to "Log in/out", login_path, class: "button is-light" %>
+            <%= link_to "Sign up", new_user_path, class: "button is-primary has-text-dark" %>
+            <%= link_to "Log in", login_path, class: "button is-light" %>
+            <%= link_to "Log out", root_path, class: "button is-light" %>
         </div>
       </div>
 

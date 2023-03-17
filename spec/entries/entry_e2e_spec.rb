@@ -12,7 +12,7 @@ RSpec.describe 'end2end create entry', type: :system do
         fill_in 'username', with: "test"
         fill_in 'password', with: "testpassword"
         sleep 1
-        click_link 'Log in'
+        find(:xpath, '/html/body/div/div[5]/form/div/div[2]/div/a[1]').click
         expect(page).to have_content('All Entries')
         sleep 1
     end
